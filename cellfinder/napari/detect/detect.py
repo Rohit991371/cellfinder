@@ -263,6 +263,7 @@ def detect_widget() -> FunctionGui:
         analyse_local: bool,
         debug: bool,
         reset_button,
+        torch_device: str = "cpu",  # add torch_device parameter
     ) -> None:
         """
         Run detection and classification.
@@ -397,6 +398,7 @@ def detect_widget() -> FunctionGui:
             detection_inputs,
             classification_inputs,
             misc_inputs,
+            torch_device=torch_device,  #pass torch_device to worker
         )
 
         worker.returned.connect(

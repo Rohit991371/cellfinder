@@ -135,6 +135,13 @@ def main(
         List of detected cells.
     """
     start_time = datetime.now()
+    
+    #set use_scipy based on torch device
+    if torch_device == "cpu":
+        use_scipy = True
+    else:
+        use_scipy = False
+        
     if batch_size is None:
         if torch_device == "cpu":
             batch_size = 4
