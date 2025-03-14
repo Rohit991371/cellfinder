@@ -1,0 +1,2 @@
+## Progress as of March 10, 2025
+- Created  to define a new CLI for cell detection.
