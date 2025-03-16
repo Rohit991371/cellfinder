@@ -263,7 +263,7 @@ def detect_widget() -> FunctionGui:
         analyse_local: bool,
         debug: bool,
         reset_button,
-        torch_device: str = "cpu",  # add torch_device parameter
+        # torch_device: str = "cpu",  # add torch_device parameter
     ) -> None:
         """
         Run detection and classification.
